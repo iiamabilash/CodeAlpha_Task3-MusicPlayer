@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.player {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+h2, p {
+  margin: 5px 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  color: #00ff88;
+}
+
+#shuffleBtn.active,
+#repeatBtn.active {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#seekBar {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.volume-container {
+  margin: 10px 0;
+}
+
+.playlist {
+  margin-top: 15px;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.trackrow {
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trackrow:hover {
+  background: #333;
+}
+
+.trackrow.active {
+  background: #00ff88;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Equalizer animation */
+.equalizer {
+  display: inline-flex;
+  margin-left: 8px;
+  align-items: flex-end;
+  height: 12px;
+  visibility: hidden;
+}
+
+.bar {
+  width: 2px;
+  height: 100%;
+  background: #00ff88;
+  margin: 0 1px;
+  animation: bounce 1s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.bar:nth-child(1) { animation-delay: 0s; }
+.bar:nth-child(2) { animation-delay: 0.2s; }
+.bar:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.trackrow.active .equalizer {
+  visibility: visible;
+}

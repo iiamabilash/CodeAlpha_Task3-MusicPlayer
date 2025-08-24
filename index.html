@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <h2 id="songTitle">Song Title</h2>
+    <p id="songArtist">Artist</p>
+
+    <audio id="audio"></audio>
+
+    <div class="controls">
+      <button id="prevBtn">⏮</button>
+      <button id="playBtn">▶</button>
+      <button id="nextBtn">⏭</button>
+      <button id="shuffleBtn">🔀</button>
+      <button id="repeatBtn">🔁</button>
+    </div>
+
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="seekBar" min="0" max="100" value="0">
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="volume-container">
+      <label>🔊</label>
+      <input type="range" id="volumeControl" min="0" max="100" value="80">
+    </div>
+
+    <div class="playlist">
+      <div class="trackrow" src="song1.mp3.mpeg" title="Monica" artist="Anirudh Ravichander,Asal Kolaar,Sublahshini,Vishnu Edavan">
+        Song One - Artist A
+        <div class="equalizer">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="trackrow" src="song2.mp3.mpeg" title="Kanimaa" artist="Santhosh Narayanan,The Indian Choral Ensemble,Vivek">
+        Song Two - Artist B
+        <div class="equalizer">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="trackrow" src="song3.mp3.mpeg" title="Pottala Muttaye" artist="Santhosh Narayanan,Sublahshini,Vivek">
+        Song Three - Artist C
+        <div class="equalizer">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
